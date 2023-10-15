@@ -32,12 +32,12 @@ export default async function Post({ params }: { params: { postId: string } }) {
 
   return (
     <div className="px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
-      <h1 className="text-3xl mt-4 mb-0">{title}</h1>
+      <h2 className="text-3xl mt-4 mb-0">{title}</h2>
       <p className="mt-0">{pubDate}</p>
       <article>
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p>
-          <Link href="/">← Back to home</Link>
+          <Link href="/posts">← Back to all posts</Link>
         </p>
       </article>
     </div>
