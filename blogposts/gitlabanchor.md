@@ -10,7 +10,11 @@ date: "2023-08-30"
 #   - opensource
 ---
 
-https://gitlab.com/gitlab-org/gitlab/-/issues/414677
+The smallest issues, such as updating one character in an anchor tag, can be more complex than one would think!
+
+My first contribution to the GitLab project tackled: [Move Full stop out of "Learn More."](https://gitlab.com/gitlab-org/gitlab/-/issues/414677)
+
+### Getting started
 
 First steps - get GDK running locally and find where the component is rendered. This is where I encountered the first problem - where I was expecting to find Vulnerability Report in the Security dropdown.
 
@@ -22,18 +26,61 @@ I was on the right track, the GDK is similar to self-managed Gitlab and I needed
 
 I followed the steps documented [here](https://gitlab.com/gitlab-org/gitlab-development-kit/blob/main/doc/index.md#configure-developer-license-in-gdk) and [here](https://docs.gitlab.com/ee/administration/license_file.html), ran `gdk restart`, now I can see where the component is rendered.
 
-Updated `%{linkStart}Learn more%.{linkEnd}` to `%{linkStart}Learn more%{linkEnd}.` However, in the DOM the component now renders with the '.' interpolated into it's own string:
+### Making the change
 
-```<a href="/help/user/application_security/vulnerability_report/index" rel="noopener" target="_blank" class="gl-link">
-          Learn more
-        </a>
-        "."
-```
+On to the update itself! In "ee/app/assets/javascripts/security_dashboard/components/shared/vulnerability_report/vulnerability_report_header.vue", I updated
+
+````js
+%{linkStart}Learn more%.{linkEnd}``` to
+```js
+%{linkStart}Learn more%{linkEnd}.```.
+
+However, in the DOM the component now renders with the '.' interpolated into it's own string:
+
+```js
+<a
+  href="/help/user/application_security/vulnerability_report/index"
+  rel="noopener"
+  target="_blank"
+  class="gl-link"
+>
+  Learn more
+</a>;
+(".");
+````
 
 Rendering:
 
 > Learn more .
 
-In addition, this string is the key of and `s__` value in an `i18n` dictionary, meaning this is used for translation into multiple languages in internationalisation.
+Not what we're looking for!
 
-The .pot file referring to this phrase differs - is this an issue? Documentation on languages: https://docs.gitlab.com/ee/development/i18n/externalization.html#javascript-files
+### Fixing the extra space
+
+Removing the extra space took a little trial and error plus assistance from the GitLab team. For some reason, line breaks in the code editor affects how the component is rendered.
+
+First off, I had:
+
+```js
+<template #link="{ content }">
+          <gl-link
+          :href="$options.DOC_PATH_VULNERABILITY_REPORT"
+          target="_blank"
+          >{{ content }}</gl-link
+          >
+          </template>
+```
+
+Updating to:
+
+```js
+<template #link="{ content }">
+<gl-link :href="$options.DOC_PATH_VULNERABILITY_REPORT" target="_blank">{{
+            content
+          }}</gl-link>
+        </template>
+```
+
+Fixed the issue! Now we have a correctly rendered link:
+
+> Learn more.
