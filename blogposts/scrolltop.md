@@ -1,5 +1,5 @@
 ---
-title: Scroll to Top Button
+title: Creating a Scroll to Top button in React and TypeScript
 # subtitle: Adding a UI element to scroll to the top of the search page
 date: "2023-08-04"
 # tags:
@@ -10,7 +10,7 @@ date: "2023-08-04"
 #   - "#opensource"
 ---
 
-Working on a feature for [# 🚀 Feature: Add a 'back to top' button for long search results](https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues/7). My first attempt was close, my approach was roughly:
+Working on a feature for [# 🚀 Feature: Add a 'back to top' button for long search results](https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues/7). My first attempt was close, my approach was along the lines of:
 
 1. Add a link to the page with an `href="#title"`
 2. The button has an `onClick` that:

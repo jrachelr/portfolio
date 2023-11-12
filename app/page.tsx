@@ -1,7 +1,3 @@
-import PostList from "@/components/PostList";
-import Navbar from "@/components/Nav";
-import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="px-6 mx-auto">

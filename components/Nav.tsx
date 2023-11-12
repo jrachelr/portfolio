@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-blue-600 p-4 sticky top-0 drop-shadow-xl z-10">
+    <nav className="backdrop-brightness-50 backdrop:blur-xl p-4 sticky top-0 drop-shadow-xl z-10">
       <div className="prose mx-auto flex justify-between flex-col sm:flex-row">
         <h1 className="text-2xl font-bold text-white grid place-content-center mb-2 md:mb-0">
           <Link
