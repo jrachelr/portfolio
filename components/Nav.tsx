@@ -1,32 +1,38 @@
 import Link from "next/link";
 
 export default function Navbar() {
+  const navItems = {
+    "/": {
+      name: "home",
+    },
+
+    "/posts": {
+      name: "blog",
+    },
+  };
+
   return (
-    <nav className="backdrop-brightness-50 backdrop:blur-xl p-4 sticky top-0 drop-shadow-xl z-10">
-      <div className="prose mx-auto flex justify-between flex-col sm:flex-row">
-        <h1 className="text-2xl font-bold text-white grid place-content-center mb-2 md:mb-0">
-          <Link
-            href="/"
-            className="text-white/90 no-underline hover:text-white"
-          >
-            Home
-          </Link>
-        </h1>
-        <div className="flex flex-row justify-center sm:justify-evenly align-middle gap-4 text-white text-2xl lg:text-2xl">
-          <Link
-            href="/posts"
-            className="text-white/90 no-underline hover:text-white"
-          >
-            Blog
-          </Link>
-          <Link
-            href="/about"
-            className="text-white/90 no-underline hover:text-white"
-          >
-            About
-          </Link>
-        </div>
+    <aside className="-ml-[8px] mb-16 tracking-tight">
+      <div className="lg:sticky lg:top-20">
+        <nav
+          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+          id="nav"
+        >
+          <div className="flex flex-row space-x-0 pr-10 text-white/90 no-underline hover:text-white">
+            {Object.entries(navItems).map(([path, { name }]) => {
+              return (
+                <Link
+                  key={path}
+                  href={path}
+                  className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2"
+                >
+                  {name}
+                </Link>
+              );
+            })}
+          </div>
+        </nav>
       </div>
-    </nav>
+    </aside>
   );
 }
