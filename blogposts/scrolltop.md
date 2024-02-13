@@ -68,10 +68,37 @@ This can be achieved with even less code by avoiding `#title` altogether. Callin
 <Link href={`#${targetID}`} onClick={(event) => { event.preventDefault(); document.body.scrollTo({ behavior: "smooth", top: 0 }); }) > Scroll to Top </Link>
 ```
 
-In this instance I need to use `document.body.scrollTo` rather than `window.scrollTo` as the `<body>` element has a vertical scrollbar. The app is set to `height: 100%` in the body's CSS for an unrelated styling reason.
+In this instance I need to use `document.body.scrollTo` rather than `window.scrollTo` as the `<body>` element has a vertical scrollbar. The `<body>` is set to `height: 100%` of the containing `html` object, using `document.body.scrollTo` will take us to 0% (the top) of the body object.
 
 ```ts
 <button onClick={() => { document.body.scrollTo({ behavior: "smooth", top: 0 }); }) > Scroll to Top </button>
 ```
 
-This feature has taken on more of a `<button>` than `<Link>` element, so is updated accordingly.
+### Adding some styling
+
+We only want the Scroll to Top button to appear once we've scrolled away from the top of the page. To implement this, first we need to set the initial state of the button:
+
+```ts
+const [visible, setVisible] = useState(false);
+```
+
+Then we need to create the function that will switch the visibility on and off:
+
+```ts
+const toggleVisible = () => {
+  const scrolled = document.body.scrollTop;
+  setVisible(scrolled > 100);
+};
+```
+
+Finally, we add the event lister that keeps track of how far we've scrolled down the page:
+
+```ts
+if (typeof document !== "undefined") {
+  document.body.addEventListener("scroll", toggleVisible, { passive: true });
+}
+```
+
+The event listener listens for the `"scroll"` event and notifies the `toggleVisible` function. We set the function to `passive: true` to improve performance, which you can read more about [here](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#improving_scroll_performance_using_passive_listeners).
+
+Hope this helps! Happy coding!
