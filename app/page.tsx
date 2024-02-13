@@ -9,7 +9,14 @@ export default function Home() {
         <p>
           I&apos;m a software engineer, empath, and problem solver. I&apos;m
           currently contributing to opensource and learning new things every
-          day, which you can read about <Link href="/posts">here</Link>.
+          day, which you can read about{" "}
+          <Link
+            className="hover:text-neutral-800 dark:hover:text-neutral-200"
+            href="/posts"
+          >
+            here
+          </Link>
+          .
         </p>
       </div>
     </div>

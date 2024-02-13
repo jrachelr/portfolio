@@ -1,25 +1,25 @@
 import Link from "next/link";
 
-export default function Navbar() {
-  const navItems = {
+export default function Footer() {
+  const footerItems = {
     "/": {
-      name: "home",
+      name: "github",
     },
 
     "/posts": {
-      name: "posts",
+      name: "mail",
     },
   };
 
   return (
-    <aside className="-ml-[8px] mb-6 tracking-tight">
-      <div className="lg:sticky lg:top-20">
-        <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
-          id="nav"
+    <aside className="-mr-[8px] mt-6 tracking-tight">
+      <div className="lg:sticky lg:bottom-20">
+        <footer
+          className="flex flex-row-reverse items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+          id="footer"
         >
           <div className="flex flex-row space-x-0 pr-10 dark:text-white no-underline">
-            {Object.entries(navItems).map(([path, { name }]) => {
+            {Object.entries(footerItems).map(([path, { name }]) => {
               return (
                 <Link
                   key={path}
@@ -31,7 +31,7 @@ export default function Navbar() {
               );
             })}
           </div>
-        </nav>
+        </footer>
       </div>
     </aside>
   );

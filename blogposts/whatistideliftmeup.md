@@ -15,8 +15,6 @@ Tidelift is an organization who's mission is to improve open-source software by 
 
 This mission is becoming ever more critical as more and more software is built on open-source code.
 
-![Open-source code supporting technology infrastructure](/Users/racheljohnson/projects/portfolio/public/opensource.png)
-
 The accompanying web app to Tidelift Me Up is a NextJS app:
 
 ### How does Tidelift Me Up work?
@@ -66,5 +64,4 @@ Both of those API calls are JSON APIs. Fun fact, Next.js’s dev server will log
 
 - The npm one is a GET request sent to https://api.npms.io/v2/search?q=maintainer:joshuakgoldberg so you can see it in your browser
 - The tidelift one is a POST request sent to https://tidelift.com/api/depci/estimate/bulk_estimates so you can’t see it in your browser
-  - The request comes from this function in the `tidelift-me-up` package: https://github.com/JoshuaKGoldberg/tidelift-me-up/blob/4d905b40bd161cc56ecbafadfa4c32c5dda8ec44/src/getPackageEstimates.ts#L8
-  - The data looks like this:
+  - The request comes from this function in the `tidelift-me-up` [package](https://github.com/JoshuaKGoldberg/tidelift-me-up/blob/4d905b40bd161cc56ecbafadfa4c32c5dda8ec44/src/getPackageEstimates.ts#L8)
