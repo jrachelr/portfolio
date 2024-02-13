@@ -1,16 +1,17 @@
-import PostList from "@/components/PostList";
-import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   return (
-    <main className="px-6 mx-auto">
+    <div className="px-6 mx-auto">
       <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
-        Hello and Welcome 👋&nbsp;
-        <span className="whitespace-nowrap">
-          I&apos;m <span className="font-bold">Rachel</span>.
-        </span>
+        <span className="whitespace-nowrap">Hello! I&apos;m Rachel 💫</span>
       </p>
-      <PostList />
-    </main>
+      <div className="prose dark:prose-invert">
+        <p>
+          I&apos;m a software engineer, empath, and problem solver. I&apos;m
+          currently contributing to opensource and learning new things every
+          day, which you can read about <Link href="/posts">here</Link>.
+        </p>
+      </div>
+    </div>
   );
 }

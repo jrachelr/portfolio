@@ -1,5 +1,5 @@
 ---
-title: Scroll to Top Button
+title: Creating a Scroll to Top button in React and TypeScript
 # subtitle: Adding a UI element to scroll to the top of the search page
 date: "2023-08-04"
 # tags:
@@ -10,7 +10,7 @@ date: "2023-08-04"
 #   - "#opensource"
 ---
 
-Working on a feature for [# 🚀 Feature: Add a 'back to top' button for long search results](https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues/7). My first attempt was close, my approach was roughly:
+Working on a feature for [# 🚀 Feature: Add a 'back to top' button for long search results](https://github.com/JoshuaKGoldberg/tidelift-me-up-site/issues/7). My first attempt was close, my approach was along the lines of:
 
 1. Add a link to the page with an `href="#title"`
 2. The button has an `onClick` that:
@@ -23,19 +23,18 @@ Working on a feature for [# 🚀 Feature: Add a 'back to top' button for long se
 
 ##### Streamlining the title
 
-Rather than constructing the title from the `event.currentTarget,` you can keep a constant in your code. That way it never has to re-read it from the DOM element.
+Rather than constructing the title from the `event.currentTarget,` ! can keep a constant in your code. That way it never has to re-read it from the DOM element.
 
 ```ts
 const targetID = "title";
-
-<Link href={`#${targetID}`}`
+<Link href={`#${targetID}`}
 onClick={(event) => { event.preventDefault(); const element = document.getElementById(targetId); window.scrollTo({ behavior: "smooth", top: element?.getBoundingClientRec().top }); }) > Scroll to Top
 </Link>
 ```
 
 Re-using constants instead of accessing dynamic DOM attributes is generally a good idea. It’s less code you have to write. And it means you don’t have to risk reaching into the document (which users might have toyed with).
 
-##### An alternative: React Refs
+### An alternative: React Refs
 
 In theory, the code could avoid the `getElementById` call altogether by using a React “ref” (reference to some information separate from your React state). Refs can be used for a few things, so there are a couple of docs pages:
 
@@ -61,18 +60,45 @@ Then, `ResultsDisplay` could call the element’s `.scrollIntoView`:
 
 However this only works on Next.js client components, therefore:
 
-##### Streamlining the Scroll
+### Streamlining the Scroll
 
-You can achieve this with even less code by avoiding `#title` altogether. Calling `document.body.scrollTo` and telling it `top: 0` will scroll to the top of the `<body>` element.
+This can be achieved with even less code by avoiding `#title` altogether. Calling `document.body.scrollTo` and telling it `top: 0` will scroll to the top of the `<body>` element.
 
 ```ts
 <Link href={`#${targetID}`} onClick={(event) => { event.preventDefault(); document.body.scrollTo({ behavior: "smooth", top: 0 }); }) > Scroll to Top </Link>
 ```
 
-In this instance we need to use `document.body.scrollTo` rather than `window.scrollTo` as the `<body>` element has a vertical scrollbar. The owner of the app set a `height: 100%` in the body's CSS at some point for an unrelated styling reason.
+In this instance I need to use `document.body.scrollTo` rather than `window.scrollTo` as the `<body>` element has a vertical scrollbar. The `<body>` is set to `height: 100%` of the containing `html` object, using `document.body.scrollTo` will take us to 0% (the top) of the body object.
 
 ```ts
 <button onClick={() => { document.body.scrollTo({ behavior: "smooth", top: 0 }); }) > Scroll to Top </button>
 ```
 
-This feature has taken on more of a `<button>` than `<Link>` element, so is updated accordingly.
+### Adding some styling
+
+We only want the Scroll to Top button to appear once we've scrolled away from the top of the page. To implement this, first we need to set the initial state of the button:
+
+```ts
+const [visible, setVisible] = useState(false);
+```
+
+Then we need to create the function that will switch the visibility on and off:
+
+```ts
+const toggleVisible = () => {
+  const scrolled = document.body.scrollTop;
+  setVisible(scrolled > 100);
+};
+```
+
+Finally, we add the event lister that keeps track of how far we've scrolled down the page:
+
+```ts
+if (typeof document !== "undefined") {
+  document.body.addEventListener("scroll", toggleVisible, { passive: true });
+}
+```
+
+The event listener listens for the `"scroll"` event and notifies the `toggleVisible` function. We set the function to `passive: true` to improve performance, which you can read more about [here](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener#improving_scroll_performance_using_passive_listeners).
+
+Hope this helps! Happy coding!
