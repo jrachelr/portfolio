@@ -1,14 +1,19 @@
 import Link from "next/link";
-import { GitHub, Mail } from "react-feather";
+import { GitHub, Mail, Gitlab, Linkedin } from "react-feather";
 
 export default function Footer() {
   const footerItems = {
+    "mailto:racheljdev@gmail.com": {
+      icon: <Mail />,
+    },
     "https://github.com/jrachelr": {
       icon: <GitHub />,
     },
-
-    "mailto:jrachelr1@gmail.com": {
-      icon: <Mail />,
+    "https://gitlab.com/jrachelr1": {
+      icon: <Gitlab />,
+    },
+    "https://www.linkedin.com/in/jrachelr1/": {
+      icon: <Linkedin />,
     },
   };
 
@@ -25,6 +30,7 @@ export default function Footer() {
                 <Link
                   key={path}
                   href={path}
+                  target="_blank"
                   className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2"
                 >
                   {icon}
