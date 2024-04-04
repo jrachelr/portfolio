@@ -13,6 +13,8 @@ The Tidelift Me Up tool is built on Tidelift's API, which helps maintainers to f
 
 Tidelift is an organization who's mission is to improve open-source software by giving maintainers recognition and compensation, while giving organizations necessary information to securely develop their applications using open-source.
 
+![alt text](opensource.png "Title")
+
 This mission is becoming ever more critical as more and more software is built on open-source code.
 
 The accompanying web app to Tidelift Me Up is a NextJS app:

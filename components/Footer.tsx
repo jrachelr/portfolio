@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <aside className=" mt-auto ">
+    <aside className="mt-auto ">
       <div className="my-10">
         <footer
           className="flex flex-row-reverse items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
