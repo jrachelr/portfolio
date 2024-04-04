@@ -13,7 +13,7 @@ The Tidelift Me Up tool is built on Tidelift's API, which helps maintainers to f
 
 Tidelift is an organization who's mission is to improve open-source software by giving maintainers recognition and compensation, while giving organizations necessary information to securely develop their applications using open-source.
 
-![alt text](opensource.png "Title")
+![Dependency](/images/opensource.png "Someday ImageMagick will finally break for good and we'll have a long period of scrambling as we try to reassemble civilization from the rubble.")
 
 This mission is becoming ever more critical as more and more software is built on open-source code.
 
