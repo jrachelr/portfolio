@@ -1,8 +1,9 @@
-import PortfolioPreview from "@/components/PortfolioPreview";
+import PortfolioList from "@/components/PortfolioList";
+
 export default function Page() {
   return (
     <section>
-      <PortfolioPreview />
+      <PortfolioList />
     </section>
   );
 }
