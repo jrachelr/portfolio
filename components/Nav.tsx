@@ -5,8 +5,8 @@ export default function Navbar() {
     "/": {
       name: "home",
     },
-    "/projects": {
-      name: "projects",
+    "/portfolio": {
+      name: "portfolio",
     },
     "/posts": {
       name: "posts",
