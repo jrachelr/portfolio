@@ -1,8 +1,7 @@
-import { workSamples } from "@/lib/workSamples";
 import PortfolioCard from "./PortfolioCard";
+import samples from "../public/data/work-samples.json";
 
-export default function PortfolioList() {
-  const samples = workSamples;
+export default async function PortfolioList() {
   return (
     <section className="mt-6 mx-auto max-w-2xl">
       <ul className="w-full">
