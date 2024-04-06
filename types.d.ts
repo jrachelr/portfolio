@@ -5,9 +5,9 @@ type BlogPost = {
 };
 
 type WorkSample = {
-  id: number;
+  id: string;
   title: string;
-  year: number;
+  year: string;
   company: string;
   type: string;
   src: string;

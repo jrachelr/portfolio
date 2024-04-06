@@ -15,7 +15,6 @@ export default function PortfolioCard({ sample }: Props) {
         href={`/portfolio/${id}`}
       >
         {title}
-        {year}
       </Link>
     </li>
   );
