@@ -10,7 +10,7 @@ type WorkSample = {
   year: number;
   company: string;
   type: string;
-  url: string;
+  src: string;
   name: string;
 };
 

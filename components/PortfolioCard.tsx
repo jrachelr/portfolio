@@ -11,9 +11,8 @@ export default function PortfolioCard({ sample }: Props) {
   return (
     <li className="mt-4 text-xl dark:text-white/90">
       <Link
-        className="underline hover:text-black/70 dark:hover:text-white"
+        className="hover:underline hover:text-black/70 dark:hover:text-white"
         href={`/portfolio/${id}`}
-        // sample={sample}
       >
         {title}
         {year}

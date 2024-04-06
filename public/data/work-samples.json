@@ -1,10 +1,10 @@
 [
   {
-    "title": "Q4 2015 US Office Market Trends",
+    "title": "Q4 2015 United States Office Market Trends",
     "year": 2015,
     "company": "JLL",
     "type": "presentation",
-    "url": "work-samples/q4-2015-office-market-trends.pdf",
+    "src": "work-samples/q4-2015-office-market-trends.pdf",
     "name": "q4-2015-office-market-trends",
     "id": 1
   },
@@ -13,7 +13,7 @@
     "year": 2015,
     "company": "JLL",
     "type": "Infographic",
-    "url": "work-samples/2015-VC-infographic.pdf",
+    "src": "work-samples/2015-VC-infographic.pdf",
     "name": "2015-VC-infographic",
     "id": 2
   },
@@ -23,7 +23,7 @@
     "year": 2017,
     "company": "CBRE",
     "type": "whitepaper",
-    "url": "work-samples/2017-cbre-retail-whitepaper.pdf",
+    "src": "https://drive.google.com/file/d/1U9bagMwUB2HveC85e9S01w69fVNK44F1/preview",
     "id": 3
   },
   {
@@ -32,7 +32,7 @@
     "year": 2018,
     "company": "CBRE",
     "type": "whitepaper",
-    "url": "./2018-cbre-retail-viewpoint.pdf",
+    "src": "2018-cbre-retail-viewpoint.pdf",
     "id": 4
   }
 ]
