@@ -32,7 +32,7 @@
     "year": 2018,
     "company": "CBRE",
     "type": "whitepaper",
-    "url": "public/work-samples/2018-cbre-retail-viewpoint.pdf",
+    "url": "./2018-cbre-retail-viewpoint.pdf",
     "id": 4
   }
 ]
