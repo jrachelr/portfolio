@@ -1,5 +1,4 @@
 import Link from "next/link";
-import samples from "../public/data/work-samples.json";
 
 type Props = {
   sample: WorkSample;
