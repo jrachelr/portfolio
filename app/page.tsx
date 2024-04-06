@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <section>
-      <div className="px-6 flex flex-row">
+      <div className="px-6 pt-2 flex flex-row">
         <Image
           src="/images/profile.jpg"
           alt="me"
