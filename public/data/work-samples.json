@@ -1,0 +1,38 @@
+[
+  {
+    "title": "United States Office Review",
+    "year": "2015",
+    "company": "JLL",
+    "type": "Presentation",
+    "src": "https://drive.google.com/file/d/1eoFmVJrAuKfY7qYFxYQB9hzsT6EItd11/preview",
+    "name": "q4-2015-office-market-trends",
+    "id": "1"
+  },
+  {
+    "title": "Money Doesn't Grow on Trees: It Comes From Venture Capital Firms",
+    "year": "2015",
+    "company": "JLL",
+    "type": "Infographic",
+    "src": "https://drive.google.com/file/d/1MFAvWtPumr9d-EexGZ758GNfxbP9G8J6/preview",
+    "name": "2015-VC-infographic",
+    "id": "2"
+  },
+  {
+    "name": "2017-cbre-retail-whitepaper",
+    "title": "How Is New York City Positioned To Handle The Challenges Of Today's Retail Market?",
+    "year": "2017",
+    "company": "CBRE",
+    "type": "Whitepaper",
+    "src": "https://drive.google.com/file/d/1U9bagMwUB2HveC85e9S01w69fVNK44F1/preview",
+    "id": "3"
+  },
+  {
+    "name": "2018-cbre-retail-viewpoint",
+    "title": "New York City Embraces Omnichannel Retail",
+    "year": "2018",
+    "company": "CBRE",
+    "type": "Whitepaper",
+    "src": "https://drive.google.com/file/d/1-ZIb4H3xVq2NSMNVq3KGZ64xb-xMMZOe/preview",
+    "id": "4"
+  }
+]
