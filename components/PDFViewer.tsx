@@ -4,7 +4,7 @@ export interface PDFViewerProps {
 
 export default async function PDFViewer({ data }: PDFViewerProps) {
   return (
-    <section className="mx-auto max-w-2xl">
+    <section className="mx-auto max-w-2xl p-auto">
       <iframe
         src={data?.src}
         allow="autoplay"

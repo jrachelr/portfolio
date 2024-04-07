@@ -10,7 +10,7 @@ export default function PostPreview({ post }: Props) {
   const formattedDate = getFormattedDate(date);
 
   return (
-    <li className="mt-4 text-xl dark:text-white/90">
+    <li className="m-4 text-xl dark:text-white/90">
       <Link
         className="hover:underline hover:text-black/70 dark:hover:text-white"
         href={`/posts/${id}`}
@@ -18,7 +18,7 @@ export default function PostPreview({ post }: Props) {
         {title}
       </Link>
       <br />
-      <p className="text-sm mt-1">{formattedDate}</p>
+      <p className="text-xs mt-1">{formattedDate}</p>
     </li>
   );
 }
