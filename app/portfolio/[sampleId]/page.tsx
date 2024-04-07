@@ -9,7 +9,7 @@ export default function Page({ params: { sampleId } }: Params) {
   const data = samples.find((sample) => sample.id === sampleId);
 
   return (
-    <div className="prose prose-l prose-slate dark:prose-invert mx-auto">
+    <div className="p-2">
       <PDFViewer data={data} />
       <p></p>
     </div>
