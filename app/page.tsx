@@ -3,14 +3,17 @@ export default function Home() {
   return (
     <section>
       <div className="py-6">
-        <div className="px-6 flex flex-row">
-          <Image
-            src="/images/profile.jpg"
-            alt="me"
-            width="300"
-            height="400"
-            className="rounded-3xl purple-shadow"
-          />
+        <div className="px-6 flex flex-col sm:flex-row">
+          <div>
+            <Image
+              src="/images/profile_small.jpg"
+              alt="me"
+              width="300"
+              height="400"
+              className="rounded-3xl purple-shadow"
+              priority={true}
+            />
+          </div>
           <div className="px-6 flex flex-col">
             <h1 className="font-sans font-bold text-2xl tracking-wide dark:text-slate-50 whitespace-nowrap my-5">
               Hi, I&apos;m Rachel
