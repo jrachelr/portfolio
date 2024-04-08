@@ -7,7 +7,7 @@ import GlassPane from "@/components/GlassPane";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "✨racheldev",
+  title: "racheldev",
   description: "Created by Rachel Johnson",
 };
 

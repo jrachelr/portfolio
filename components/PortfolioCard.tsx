@@ -15,7 +15,6 @@ export default function PortfolioCard({ sample }: Props) {
         </div>
         <div className="flex flex-row items-start relative text-xs">
           <span className="pr-2">{company}</span>
-          <span className="pr-2">{year}</span>
           <span className="pr-2">{type}</span>
         </div>
       </Link>
