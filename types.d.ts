@@ -13,7 +13,7 @@ type WorkSample = {
   src: string;
   name: string;
   image: string;
-  description: string;
+  description: string[];
 };
 
 type workSamples = WorkSample[];
