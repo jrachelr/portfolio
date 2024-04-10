@@ -1,12 +1,18 @@
 [
   {
-    "title": "United States Office Review",
+    "title": "United States Office Investment Review",
     "year": "2015",
     "company": "JLL",
     "type": "Presentation",
     "src": "https://drive.google.com/file/d/1eoFmVJrAuKfY7qYFxYQB9hzsT6EItd11/preview",
-    "name": "q4-2015-office-market-trends",
-    "id": "1"
+    "name": "./office-investment.pdf",
+    "id": "1",
+    "image": "/public/office-investment.png",
+    "description": [
+      "This presentation is an overview of investment trends in the United States Office market, covering all transactions greater than $5 million in the top 50 markets across the country.",
+      "It sources JLL’s in house data, as well as third-party data sources including the Federal Reserve, Real Capital Analytics and the National Council of Real Estate Investment Fiduciaries.",
+      "It was delivered to JLL’s leadership and key clients."
+    ]
   },
   {
     "title": "Money Doesn't Grow on Trees: It Comes From Venture Capital Firms",
@@ -14,25 +20,43 @@
     "company": "JLL",
     "type": "Infographic",
     "src": "https://drive.google.com/file/d/1MFAvWtPumr9d-EexGZ758GNfxbP9G8J6/preview",
-    "name": "2015-VC-infographic",
-    "id": "2"
+    "name": "./2015-VC-infographic.pdf",
+    "id": "2",
+    "image": "../public/portfolio/2015-VC-infographic.png",
+    "description": [
+      "This infographic details the relationship between venture capital funding and real estate markets.",
+      "It sources JLL’s in house data, as well as third-party data sources including Yahoo Finance.",
+      "It was delivered to JLL’s Tenant Representation group to aid decision making on location and footprint for technology clients."
+    ]
   },
   {
-    "name": "2017-cbre-retail-whitepaper",
+    "name": "./2017-cbre-retail-whitepaper.pdf",
     "title": "How Is New York City Positioned To Handle The Challenges Of Today's Retail Market?",
     "year": "2017",
     "company": "CBRE",
-    "type": "Whitepaper",
+    "type": "White Paper",
     "src": "https://drive.google.com/file/d/1U9bagMwUB2HveC85e9S01w69fVNK44F1/preview",
-    "id": "3"
+    "id": "3",
+    "image": "./2017-cbre-retail-whitepaper.png",
+    "description": [
+      "This white paper examines New York City’s retail market in the context of ongoing retail bankruptcies and store closures across the United States.",
+      "It sources CBRE’s in house data, as well as third-party data sources including Moody’s Analytics, the U.S. Census Bureau and the New York City Comptroller.",
+      "It was published to global subscribers of CBRE Research and used to aid decision making for clients of CBRE’s retail tenant representation group."
+    ]
   },
   {
-    "name": "2018-cbre-retail-viewpoint",
+    "name": "./omnichannel-viewpoint.pdf",
     "title": "New York City Embraces Omnichannel Retail",
     "year": "2018",
     "company": "CBRE",
-    "type": "Whitepaper",
+    "type": "White Paper",
     "src": "https://drive.google.com/file/d/1-ZIb4H3xVq2NSMNVq3KGZ64xb-xMMZOe/preview",
-    "id": "4"
+    "id": "4",
+    "image": "./omnichannel-viewpoint.png",
+    "description": [
+      "This white paper discusses the evolution of online and omnichannel retail in New York City and how brands are adapting to evolving technology.",
+      "It sources CBRE’s in house data, as well as third-party data sources including Adobe Analytics and the U.S. Census Bureau.",
+      "It was published to global subscribers of CBRE Research and used to aid decision making for clients of CBRE’s retail tenant representation group."
+    ]
   }
 ]
