@@ -12,6 +12,8 @@ type WorkSample = {
   type: string;
   src: string;
   name: string;
+  image: string;
+  description: string;
 };
 
 type workSamples = WorkSample[];

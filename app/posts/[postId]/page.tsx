@@ -2,6 +2,7 @@ import { getSortedPostsData, getPostData } from "@/lib/posts";
 import getFormattedDate from "@/lib/getFormattedDate";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { ArrowLeft } from "react-feather";
 
 export function generateStaticParams() {
   const posts = getSortedPostsData();
@@ -36,10 +37,11 @@ export default async function Post({ params }: { params: { postId: string } }) {
       <p className="mt-0">{pubDate}</p>
       <article className="prose prose-base prose-slate dark:prose-invert mx-auto">
         <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <p className="prose prose-sm prose-slate dark:prose-invert mx-auto">
-          <Link href="/posts">← Back to all posts</Link>
-        </p>
+        <p className="prose prose-sm prose-slate dark:prose-invert mx-auto"></p>
       </article>
+      <Link href="/posts">
+        <ArrowLeft />
+      </Link>
     </div>
   );
 }

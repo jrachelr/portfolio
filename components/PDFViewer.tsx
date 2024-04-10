@@ -6,10 +6,10 @@ export default async function PDFViewer({ data }: PDFViewerProps) {
   return (
     <section className="mx-auto max-w-2xl p-auto">
       <iframe
-        src={data?.src}
+        src={data?.name}
         allow="autoplay"
-        height="480"
-        width="640"
+        height="auto"
+        width="auto"
       ></iframe>
     </section>
   );
