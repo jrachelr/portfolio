@@ -26,8 +26,8 @@ export default function Home() {
                 our world are connected.
               </p>
               <p>
-                I bring a lens of curiosity while working with data, uncovering
-                patterns not seen at first glance.
+                I bring this lens of curiosity to technical endeavors, whether
+                it be uncovering patterns in data or writing code.
               </p>
             </div>
           </div>
