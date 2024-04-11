@@ -1,7 +1,7 @@
 ---
 title: Creating a Scroll to Top button in React and TypeScript
 # subtitle: Adding a UI element to scroll to the top of the search page
-date: "2023-08-04"
+date: "2023-08-14"
 # tags:
 #   - "#coding"
 #   - "#react"

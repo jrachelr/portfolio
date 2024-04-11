@@ -1,6 +1,6 @@
 ---
 title: "What is internationalization and i18n?"
-date: "2023-09-15"
+date: "2024-1-15"
 ---
 
 While working on a UI bug on GitLab.com, I came across a term I was unfamiliar with - a string with a function `s__` in an `i18n` dictionary.
