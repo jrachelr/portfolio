@@ -1,6 +1,6 @@
 ---
 title: "clsx: conditional CSS classes in React"
-date: "2023-09-03"
+date: "2023-11-03"
 ---
 
 Imagine you have a component you only want to render depending on some action from the user. E.g. a [scroll to top button](/blogposts/scrolltop.md). Or any kind of style you'd like tp apply dynamically.
