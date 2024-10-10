@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import GlassPane from "@/components/GlassPane";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-MTZB4X7H" />
       <body
         className={`${inter.className} candy-mesh dark:bg-blue-950 min-h-screen antialiased max-w-2xl flex flex-col md:flex-row mx-4 lg:mx-auto`}
       >

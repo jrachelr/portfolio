@@ -20,7 +20,7 @@ The parameters I needed to get started were:
 url = "https://www.travelyosemite.com/lodging/housekeeping-camp"
 options = Options()
 # comment line below to see process
-# options.add_argument("--headless")
+# options.add_argument("--headless=new")
 arrival_input_id = "container-widget-hero_ArrivalDate"
 depart_input_id = "container-widget-hero_DepartureDate"
 arrival_date = "5/30/2024"
