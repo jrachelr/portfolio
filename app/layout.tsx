@@ -23,14 +23,13 @@ export default function RootLayout({
       <body
         className={`${inter.className} candy-mesh dark:bg-blue-950 min-h-screen antialiased max-w-2xl flex flex-col md:flex-row mx-4 lg:mx-auto`}
       >
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MTZB4X7H"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-MTZB4X7H"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+
         <main className="flex-auto min-w-0 flex flex-col px-2 md:px-0">
           <Navbar />
           <GlassPane>{children}</GlassPane>
