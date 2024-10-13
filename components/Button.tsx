@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 declare const window: Window & { dataLayer: Record<string, unknown>[] };
 interface DataLayerValues {
   key: string;
@@ -43,25 +43,19 @@ export default function EventButton() {
   };
 
   return (
-    <>
-      {
-        dataLayerValues ? (
-          <>
-            <p>Data Layer Values: {JSON.stringify(dataLayerValues)}</p>
+    <Suspense>
+      {dataLayerValues ? (
+        <>
+          <p>Data Layer Values: {JSON.stringify(dataLayerValues)}</p>
 
-            <button
-              className="glass dark:text-white dark:bg-blue-950/75 rounded-2xl border-solid border-gray-200 purple-shadow mb-6"
-              onClick={handleClick}
-            >
-              Send request
-            </button>
-          </>
-        ) : null
-        // <p>No query parameters found</p>
-      }
-      {/* <div>key: {searchParams.get("key")}</div>
-      <div>value: {searchParams.get("value")}</div>
-      <button onClick={handleClick}>Send request</button> */}
-    </>
+          <button
+            className="glass dark:text-white dark:bg-blue-950/75 rounded-2xl border-solid border-gray-200 purple-shadow mb-6"
+            onClick={handleClick}
+          >
+            Send request
+          </button>
+        </>
+      ) : null}
+    </Suspense>
   );
 }
