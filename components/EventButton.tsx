@@ -45,16 +45,14 @@ export default function EventButton() {
   return (
     <Suspense>
       {dataLayerValues ? (
-        <>
-          <p>Data Layer Values: {JSON.stringify(dataLayerValues)}</p>
-
-          <button
-            className="glass dark:text-white dark:bg-blue-950/75 rounded-2xl border-solid border-gray-200 purple-shadow mb-6"
-            onClick={handleClick}
-          >
-            Send request
-          </button>
-        </>
+        <div className=" dark:text-white mx-2">
+          <p className="py-2">
+            Data Layer Values: {JSON.stringify(dataLayerValues)}
+          </p>
+          <div className="glass dark:bg-blue-950/75 dark:hover:bg-indigo-800 hover:bg-fuchsia-300 hover:text-neutral-800 dark:hover:text-neutral-200 rounded-2xl border-solid border-gray-200 purple-shadow my-2">
+            <button onClick={handleClick}>Send request</button>
+          </div>
+        </div>
       ) : null}
     </Suspense>
   );
