@@ -5,8 +5,6 @@ import { Inter } from "next/font/google";
 import GlassPane from "@/components/GlassPane";
 import EventButton from "@/components/Button";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { useSearchParams } from "next/navigation";
-import ShowKeyValueParams from "@/components/ShowParams";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,7 +35,7 @@ export default function RootLayout({
         <main className="flex-auto min-w-0 flex flex-col px-2 md:px-0">
           <Navbar />
           <GlassPane>{children}</GlassPane>
-          <ShowKeyValueParams />
+          <EventButton />
         </main>
       </body>
     </html>
