@@ -12,7 +12,6 @@ export default function Navbar() {
     "/posts": {
       name: "posts",
     },
-    "/impact": { name: "impact" },
   };
 
   const contactLinks = {
