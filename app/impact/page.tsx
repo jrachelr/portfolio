@@ -1,5 +1,10 @@
 import EventButton from "@/components/EventButton";
+import { Suspense } from "react";
 
 export default function Page() {
-  return <EventButton />;
+  return (
+    <Suspense>
+      <EventButton />
+    </Suspense>
+  );
 }
